@@ -30,4 +30,7 @@ jobs:
       with:
         name: test-reports
         path: build/reports/tests/test/
-    
+    - name: publish package
+      run: ./gradlew publish
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
